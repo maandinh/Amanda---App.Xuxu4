@@ -8,14 +8,15 @@ class App extends Component {
       receita: '',
       ingredientes: '',
       preparo: '',
-      tempo: '',
+      observacao: '',
     };
 
     // Bindando os métodos
     this.entradaReceita = this.entradaReceita.bind(this);
     this.entradaIngredientes = this.entradaIngredientes.bind(this);
     this.entradaPreparo = this.entradaPreparo.bind(this);
-    this.entradaTempo = this.entradaTempo.bind(this);
+    this.entradaObs = this.entradaObs.bind(this);
+    
   }
 
   entradaReceita(texto) {
@@ -30,7 +31,7 @@ class App extends Component {
     this.setState({ email: '' + texto });
   }
 
-  entradaTempo(texto) {
+  entradaObs(texto) {
     this.setState({ cidade: '' + texto});
   }
 
@@ -63,7 +64,7 @@ class App extends Component {
           <TextInput
             style={styles.entrada}
             placeholder="Tempo de Preparo"
-            onChangeText={this.entradaTempo}
+            onChangeText={this.entradaObs}
           />
 
         </View>
@@ -90,7 +91,7 @@ class Topo extends Component {
 
 const styles = StyleSheet.create({
   scroll: {
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#213435',
   },
   container: {
     paddingHorizontal: 20,
@@ -103,7 +104,7 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 30,
   },
   cabecalho: {
-    color: '#006400',
+    color: '#9f8241',
     fontSize: 28,
     fontWeight: 'bold',
     textAlign: 'center',
